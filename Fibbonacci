@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void fibonacci(int n) {
+    long long int a = 0, b = 1, fib;
+
+    printf("Fibonacci Series: ");
+    for (int i = 1; i <= n; i++) {
+        if (i == 1) {
+            printf("%lld ", a);
+        } else if (i == 2) {
+            printf("%lld ", b);
+        } else {
+            fib = a + b;
+            a = b;
+            b = fib;
+            printf("%lld ", fib);
+        }
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    fibonacci(n);
+    return 0;
+}
